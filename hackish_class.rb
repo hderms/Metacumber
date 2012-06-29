@@ -1,10 +1,10 @@
 class Metacumber
   class << self
-    [:Then, :When, :Given, :And].each do |verb|
-      define_method verb do |*reg, &blk|
-      puts reg.to_s
+      [:Then, :When, :Given, :And].each do |verb|
+        define_method verb do |*reg, &blk|
+          puts reg.to_s
+        end
       end
-    end
     end
   instance_eval do
     def method_missing(*args)
